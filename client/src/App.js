@@ -1,7 +1,11 @@
 import "./App.css";
 
 function App() {
-  return <div className="App"> This is the frontend</div>;
+  return (
+    <div className="bg-black text-white text-3xl">
+      <h1>App</h1>
+    </div>
+  );
 }
 
 export default App;
