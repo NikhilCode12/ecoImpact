@@ -3,6 +3,22 @@
 @tailwind utilities;
 @tailwind variants;
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 /* Tailwind styles */
 .styled_btn {
   @apply flex items-center bg-green-600 text-slate-50 text-[14px] font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:shadow-md active:shadow-none active:opacity-100;
@@ -18,4 +34,8 @@
 
 .profile_link {
   @apply text-[16px] font-semibold text-gray-400 my-auto hover:text-gray-200 justify-end;
+}
+
+.main_btn {
+  @apply flex items-center bg-gray-900 text-white text-[16px] font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:shadow-md active:shadow-none active:opacity-100;
 }

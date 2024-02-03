@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-gray-900">
         <Navbar />
-        <main className="app">{children}</main>
+        <main className="app bg-black opacity-50">{children}</main>
       </body>
     </html>
   );

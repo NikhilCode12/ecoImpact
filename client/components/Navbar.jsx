@@ -6,10 +6,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
   const [profileMenu, setProfileMenu] = useState(false);
   return (
-    <nav className="flex justify-between mb-16 pt-3 items-center px-12">
+    <nav className="flex justify-between mb-2 pt-2 items-center px-12">
       <Link href="/" className="flex items-center">
         <Image
           src={logo}
@@ -69,10 +69,11 @@ const Navbar = () => {
         )}
         {profileMenu ? (
           <motion.div
-            className="flex flex-col absolute top-20 right-12 bg-gray-700 p-4 rounded-lg w-40 items-end gap-2"
+            className="flex flex-col absolute top-16 right-12 bg-gray-800 p-4 rounded-lg w-40 items-end gap-2 z-10"
             initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 10 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
+            animate={{ opacity: 1, y: 8 }}
+            exit={{ opacity: 0, y: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <Link href="/profile" className="profile_link">
               Profile
