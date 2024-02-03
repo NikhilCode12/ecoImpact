@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+/* Tailwind styles */
+.styled_btn {
+  @apply flex items-center bg-green-600 text-slate-50 text-[14px] font-semibold py-2 px-6 rounded-full hover:opacity-90 hover:shadow-md active:shadow-none active:opacity-100;
+}
+
+.nav_link {
+  @apply text-[16px] font-semibold text-gray-400 my-auto hover:text-gray-200;
+}
+
+.profile {
+  @apply hover:scale-110 hover:opacity-95 active:opacity-100 active:scale-100 transition-all duration-200 ease-in-out;
+}
+
+.profile_link {
+  @apply text-[16px] font-semibold text-gray-400 my-auto hover:text-gray-200 justify-end;
+}

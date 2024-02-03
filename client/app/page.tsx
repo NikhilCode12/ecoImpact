@@ -1,8 +1,9 @@
-export default function Home() {
+const Home = () => {
   return (
-    <main>
-      <h1>Welcome to EcoImpact App</h1>
-      <p>Nextjs app for EcoImpact project</p>
-    </main>
+    <section className="flex w-full items-center">
+      <h1>Welcome to ecoImpact</h1>
+    </section>
   );
-}
+};
+
+export default Home;

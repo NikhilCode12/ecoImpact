@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-
+import "@/styles/globals.css";
+import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "EcoImpact App",
-  description: "Nextjs app for EcoImpact project",
+export const metadata = {
+  title: "EcoImpact",
+  description: "Take control of your carbon footprint for a greener tomorrow.",
 };
 
 export default function RootLayout({
@@ -16,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="bg-gray-900">
+        <Navbar />
+        <main className="app">{children}</main>
+      </body>
     </html>
   );
 }
