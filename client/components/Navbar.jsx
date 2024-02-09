@@ -29,11 +29,11 @@ const Navbar = () => {
       </Link>
       {isLoggedIn ? (
         <div className="flex items-center gap-12">
-          <Link href="/" className="nav_link">
-            Home
+          <Link href="/dashboard" className="nav_link">
+            Dashboard
           </Link>
           <Link href="/environmental/data" className="nav_link">
-            Calculator
+            Insights
           </Link>
           <Link href="/challenges" className="nav_link">
             Challenges
@@ -41,16 +41,13 @@ const Navbar = () => {
           <Link href="/community" className="nav_link">
             Community
           </Link>
-          <Link href="/tips" className="nav_link">
-            Tips
+          <Link href="/about" className="nav_link">
+            About
           </Link>
         </div>
       ) : null}
 
       <div className="flex gap-4">
-        <Link href="/" className="styled_btn">
-          Sign In
-        </Link>
         {isLoggedIn ? (
           <Image
             src={logo}
@@ -63,9 +60,14 @@ const Navbar = () => {
             }}
           />
         ) : (
-          <Link href="/ " className="styled_btn">
-            Sign Up
-          </Link>
+          <>
+            <Link href="/" className="styled_btn">
+              Login
+            </Link>
+            <Link href="/ " className="styled_btn">
+              Register
+            </Link>
+          </>
         )}
         {profileMenu ? (
           <motion.div
@@ -76,7 +78,7 @@ const Navbar = () => {
             transition={{ duration: 0.25, ease: "easeInOut" }}
           >
             <Link href="/profile" className="profile_link">
-              Profile
+              profile
             </Link>
             <Link href="/settings" className="profile_link">
               Settings

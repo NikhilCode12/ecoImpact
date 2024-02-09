@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Hero = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
+const Hero = () => {
   return (
     <section className="hero relative h-full">
       <video
@@ -31,7 +31,7 @@ const Hero = ({ isLoggedIn }: { isLoggedIn: boolean }) => {
           >
             Github Repo
           </a>
-          <Link href={isLoggedIn ? "/home" : "/signup"} className="styled_btn">
+          <Link href="/register" className="styled_btn">
             Get Started
           </Link>
         </div>
